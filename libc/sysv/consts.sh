@@ -1,4 +1,4 @@
-/*bin/echo   ' -*- mode:sh; indent-tabs-mode:nil; tab-width:8; coding:utf-8 -*-│
+/usr/bin/env echo ' -*- mode:sh; indent-tabs-mode:nil; tab-width:8; coding:utf-8 -*-│
 │vi: set net ft=sh ts=2 sts=2 sw=2 fenc=utf-8                               :vi│
 ╞══════════════════════════════════════════════════════════════════════════════╡
 │ Copyright 2020 Justine Alexandra Roberts Tunney                              │
@@ -465,20 +465,20 @@ syscon	utime	UTIME_OMIT				0x3ffffffe		0x3ffffffe		-2			-1			0x3ffffffe		-1			# 
 #	Unsupported values are encoded as 0.
 #
 #	group	name					GNU/Systemd		XNU's Not UNIX!		FreeBSD			OpenBSD			NetBSD			The New Technology	Commentary
-syscon	auxv	AT_EXECFD				2			0			2			0			2			0			# file descriptor of program
-syscon	auxv	AT_PHDR					3			0			3			0			3			0			# address of program headers of executable
-syscon	auxv	AT_PHENT				4			0			4			0			4			0
-syscon	auxv	AT_PHNUM				5			0			5			0			5			0
-syscon	auxv	AT_PAGESZ				6			0			6			0			6			0
-syscon	auxv	AT_BASE					7			0			7			0			7			0			# address of program interpreter
-syscon	auxv	AT_FLAGS				8			0			0			0			0			0
-syscon	auxv	AT_ENTRY				9			0			9			0			9			0			# entry address of executable
+syscon	auxv	AT_EXECFD				2			0			2			2			2			0			# file descriptor of program
+syscon	auxv	AT_PHDR					3			0			3			3			3			0			# address of program headers of executable
+syscon	auxv	AT_PHENT				4			0			4			4			4			0
+syscon	auxv	AT_PHNUM				5			0			5			5			5			0
+syscon	auxv	AT_PAGESZ				6			0			6			6			6			0
+syscon	auxv	AT_BASE					7			0			7			7			7			0			# address of program interpreter
+syscon	auxv	AT_FLAGS				8			0			0			8			0			0
+syscon	auxv	AT_ENTRY				9			0			9			9			9			0			# entry address of executable
 syscon	auxv	AT_NOTELF				10			0			10			0			0			0
 syscon	auxv	AT_OSRELDATE				0			0			18			0			0			0
-syscon	auxv	AT_UID					11			0			0			0			2001			0
-syscon	auxv	AT_EUID					12			0			0			0			2000			0
-syscon	auxv	AT_GID					13			0			0			0			2003			0
-syscon	auxv	AT_EGID					14			0			0			0			2002			0
+syscon	auxv	AT_UID					11			0			0			2001			2001			0
+syscon	auxv	AT_EUID					12			0			0			2000			2000			0
+syscon	auxv	AT_GID					13			0			0			2003			2003			0
+syscon	auxv	AT_EGID					14			0			0			2002			2002			0
 syscon	auxv	AT_PLATFORM				15			0			0			0			0			0			# address of string with hardware platform for rpath interpretation
 syscon	auxv	AT_HWCAP				16			0			0			0			0			0
 syscon	auxv	AT_CLKTCK				17			0			0			0			0			0
