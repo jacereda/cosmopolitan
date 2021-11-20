@@ -32,7 +32,6 @@ in stdenv.mkDerivation rec {
     substituteInPlace third_party/python/Python/random.c --replace '#if 1' '#if 0'
     substituteInPlace libc/integral/c.inc --replace '#pragma GCC diagnostic error "-Walloca-larger-than=1024"' "" # fails in mode=rel
     substituteInPlace libc/integral/c.inc --replace '#pragma GCC diagnostic error "-Wframe-larger-than=4096"' "" # fails in mode=rel
-  	echo "o/${mode}/third_party/python/pythontester.com.dbg: QUOTA += -M512m" >> third_party/python/python.mk
   '';
 
   preBuild = ''
